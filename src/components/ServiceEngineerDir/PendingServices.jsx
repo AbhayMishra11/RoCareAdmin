@@ -15,7 +15,7 @@ const ServiceEngineer = () => {
     ]
 
     const navigateToviewDetail = () => {
-        navigate('/admin/viewDetail')
+        navigate('/viewDetail')
     }
 
     return (

@@ -7,7 +7,7 @@ const ServiceEngineer = () => {
     const ref=useRef([])
     const navigate = useNavigate()
     const navigateTorealTimeActivity = () => {
-        navigate('/admin/technicianActivity/realTimeActivity')
+        navigate('/technicianActivity/realTimeActivity')
     }
   
     const tableData = [

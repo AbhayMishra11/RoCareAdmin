@@ -11,7 +11,7 @@ const ViewDetail = () => {
     const navigate = useNavigate()
 
     const navigateToTechnicianActivity = () => {
-        navigate('/admin/technicianActivity')
+        navigate('/technicianActivity')
     }
 
     return (<>

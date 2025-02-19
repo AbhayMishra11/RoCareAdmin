@@ -6,7 +6,7 @@ const ServiceEngineer1 = () => {
     const InputHere = ['Service Engineer Name', 'Service Engineer ID', 'Contact Number ', 'Email Address ', 'Service Type Provided ', 'Location ']
     const navigate = useNavigate()
     const navigateToEngineer2 = () => {
-        navigate('/admin/serviceEngineer2')
+        navigate('/serviceEngineer2')
     }
     return (
         <>

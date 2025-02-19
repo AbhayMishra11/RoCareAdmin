@@ -15,7 +15,7 @@ const ServiceEngineer = () => {
     ]
 
     const navigateToTechnicianActivity = () => {
-        navigate('/admin/technicianActivity')
+        navigate('/technicianActivity')
     }
 
     return (

@@ -11,9 +11,9 @@ const Header = () => {
     // Define Page Titles
   const pageTitles = {
     "/admin": "Dashboard",
-    "/admin/city": "Add City",
-    "/admin/product": "Add Product",
-    "/admin/services": "Add Services",
+    "/city": "Add City",
+    "/product": "Add Product",
+    "/services": "Add Services",
   };
 
   // Get the current page title or default to "Page Not Found"

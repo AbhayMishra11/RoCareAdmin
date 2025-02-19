@@ -29,7 +29,7 @@ const TechnicianProfileEdit = () => {
   };
 
   const navigateToServiceEngineer = () => {
-    navigate('/admin/serviceEngineer');
+    navigate('/serviceEngineer');
   };
 
   return (

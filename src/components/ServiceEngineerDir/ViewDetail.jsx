@@ -6,7 +6,7 @@ const ViewDetail = () => {
     const navigate = useNavigate()
 
     const navigateToTechnicianActivity = () => {
-        navigate('/admin/pendingServices')
+        navigate('/pendingServices')
     }
 
 

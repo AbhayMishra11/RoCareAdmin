@@ -7,11 +7,11 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        {/* User Routes */}
-        <Route path="/*" element={<UserLayout />} />
+        {/* User Routes
+        <Route path="/*" element={<UserLayout />} /> */}
 
         {/* Admin Routes */}
-        <Route path="/admin/*" element={<AdminLayout />} />
+        <Route path="/*" element={<AdminLayout />} />
       </Routes>
       </BrowserRouter>
     </>

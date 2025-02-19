@@ -26,11 +26,11 @@ const ServiceEngineer = () => {
     }
 
     const navigateToEngineer1 = () => {
-        navigate('/admin/serviceEngineer1')
+        navigate('/serviceEngineer1')
     }
 
     const navigateToEdit = () => {
-        navigate('/admin/technicianProfileEdit')
+        navigate('/technicianProfileEdit')
     }
 
     return (

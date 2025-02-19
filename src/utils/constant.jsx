@@ -90,7 +90,7 @@ export const sidebarItems = [
                 id: 2,
                 name: 'City',
                 icon: <LuMapPin />,
-                path: '/admin/city'
+                path: '/city'
             },
         ],
 
@@ -102,13 +102,13 @@ export const sidebarItems = [
                 id: 1,
                 name: 'Services',
                 icon: <FaGears />,
-                path: '/admin/services'
+                path: '/services'
             },
             {
                 id: 2,
                 name: 'Products',
                 icon: <FaHandsHoldingCircle />,
-                path:'/admin/product',
+                path:'/product',
             },
         ],
 
@@ -120,19 +120,19 @@ export const sidebarItems = [
                 id: 1,
                 name: 'Customers',
                 icon: <GoPeople />,
-                path:'/admin/customers',
+                path:'/customers',
             },
             {
                 id: 2,
                 name: 'Technician',
                 icon: <GrUserWorker />,
-                path:'/admin/technician',
+                path:'/technician',
             },
             {
                 id: 3,
                 name: 'Partner',
                 icon: <FaHandshakeSimple />,
-                path:'/admin/partner',
+                path:'/partner',
             },
         ],
 
@@ -144,19 +144,19 @@ export const sidebarItems = [
                 id: 1,
                 name: 'Pending Orders',
                 icon: <GoPeople />,
-                path:'/admin/orders',
+                path:'/orders',
             },
             {
                 id: 2,
                 name: 'Complete Orders',
                 icon: <GrUserWorker />,
-                path:'/admin/orders',
+                path:'/orders',
             },
             {
                 id: 3,
                 name: 'Cancelled Orders',
                 icon: <FaHandshakeSimple />,                
-                path:'/admin/orders',
+                path:'/orders',
             },
         ],
 
@@ -168,21 +168,21 @@ export const sidebarItems = [
                 id: 1,
                 name: 'Pending Services',
                 icon: <GoPeople />,
-                path:'/admin/pendingServices',
+                path:'/pendingServices',
 
             },
             {
                 id: 2,
                 name: 'Technicians Activity',
                 icon: <GrUserWorker />,
-                path:'/admin/technicianActivity',
+                path:'/technicianActivity',
 
             },
             {
                 id: 3,
                 name: 'Technicians Monitor',
                 icon: <FaHandshakeSimple />,
-                path:'/admin/technicianMonitoring',
+                path:'/technicianMonitoring',
 
             },
         ],
@@ -195,19 +195,19 @@ export const sidebarItems = [
                 id: 1,
                 name: 'Service List',
                 icon: <GoPeople />,                
-                path:'/admin/service-list',
+                path:'/service-list',
             },
             {
                 id: 2,
                 name: 'Existing Client List',
                 icon: <GrUserWorker />,                
-                path:'/admin/client-list',
+                path:'/client-list',
             },
             {
                 id: 3,
                 name: 'Partner Payout List',
                 icon: <FaHandshakeSimple />,
-                path:'/admin/payout-list',
+                path:'/payout-list',
 
             },
         ],
