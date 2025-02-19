@@ -1,6 +1,6 @@
 import appStore from '../assets/appStore.png'
 import playstore from '../assets/googleplay.png'
-import x from '../assets/x.png'
+import x from '../assets/X.png'
 import facebook from '../assets/Facebook.png'
 import insta from '../assets/Instagram.png'
 import linkedin from '../assets/Linkedin.png'
