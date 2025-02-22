@@ -84,7 +84,7 @@ export const sidebarItems = [
                 id: 1,
                 name: 'Dashboard',
                 icon: <LuLayoutDashboard />,
-                path: '/admin'
+                path: '/dashboard'
             },
             {
                 id: 2,
@@ -144,7 +144,7 @@ export const sidebarItems = [
                 id: 1,
                 name: 'Pending Orders',
                 icon: <GoPeople />,
-                path:'/orders',
+                path:'/pending-orders',
             },
             {
                 id: 2,

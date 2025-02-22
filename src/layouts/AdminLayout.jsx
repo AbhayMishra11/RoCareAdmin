@@ -1,12 +1,23 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Route, Routes } from "react-router-dom";
-import AddCity from "../components/superAdmin/pages/AddCity";
+// kusuma's imports
+import Login from '../pages/auth/Login';
+import SignUp from '../pages/auth/SignUp';
+import Dashboard from '../pages/modules/dashboard/Dashboard';
+import City from '../pages/modules/city/City';
+import AddCity from '../pages/modules/city/AddCity';
+import Services from '../pages/modules/services/Services';
+import AddService from '../pages/modules/services/AddService';
+import Product from '../pages/modules/product/Product';
+import TimeSlotAndDate from '../pages/modules/timeSlotAndDate/TimeSlotAndDate';
+import Sidebar from '../components/superAdmin/sidebar/Sidebar';
+import Header from '../components/superAdmin/header/Header';
+import LoadingPage from '../pages/modules/LoadingPage';
 import AddProduct from "../components/superAdmin/pages/AddProduct";
 import AddServices from "../components/superAdmin/pages/AddServices";
 import Banner from "../components/superAdmin/pages/Banner";
 import AddTimeSlot from "../components/superAdmin/pages/AddTimeSlot";
-import Header from "../components/superAdmin/header/Header";
-import Sidebar from "../components/superAdmin/sidebar/Sidebar";
+//Abhay's imports
 import ServiceEngineer from '../components/ServiceEngineerDir/ServiceEngineer'
 import ServiceEngineer1 from '../components/ServiceEngineerDir/ServiceEngineer1'
 import ServiceEngineer2 from '../components/ServiceEngineerDir/ServiceEngineer2'
@@ -16,47 +27,66 @@ import PendingServices from '../components/ServiceEngineerDir/PendingServices'
 import ViewDetail from '../components/ServiceEngineerDir/ViewDetail'
 import TechnicianProfileEdit from '../components/ServiceEngineerDir/TechnicianProfileEdit'
 import RealTimeActivity from '../components/ServiceEngineerDir/RealTimeActivity'
+//Pinki's import
 import PendingOrders from "../components/superAdmin/pages/PendingOrders";
 import SendNotification from "../components/superAdmin/pages/SendNotification";
 
-const Dashboard = () => <h1>Dashboard</h1>
 
 const AdminLayout = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay (e.g., fetching data)
+    const timer = setTimeout(() => setLoading(false), 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingPage />; //No layout applied here
+  }
+  const isHiddenPage = ['/', '/signup'].includes(location.pathname);
   return (
     <div className="flex ">
-    {/* Sidebar */}
-    <Sidebar />
+      {/* Sidebar */}
+      {!isHiddenPage && <Sidebar />}
 
-    {/* Main Content */}
-    <div className="flex-grow ">
-      {/* Header */}
-      <Header />
+      {/* Main Content */}
+      <div className="flex-grow ">
+        {/* Header */}
+        {!isHiddenPage && <Header />}
 
-      {/* Admin Routes */}
-     <div className="p-5 bg-[#EBF2F1] min-h-screen">
-     <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/city" element={<AddCity />} />
-        <Route path="/product" element={<AddProduct />} />
-        <Route path="/services" element={<AddServices />} />
-        <Route path="/time-slot" element={<AddTimeSlot />} />
-        <Route path="/banner" element={<Banner />} />
-        <Route path="/pending-orders" element={<PendingOrders/>} />
-        <Route path="/send-notification" element={<SendNotification/>} />
-        <Route path="/serviceEngineer" element={<ServiceEngineer/>} />
-        <Route path="/serviceEngineer1" element={<ServiceEngineer1/>} />
-        <Route path="/serviceEngineer2" element={<ServiceEngineer2/>} />
-        <Route path="/technicianMonitoring" element={<TechnicianMonitoring/>} />
-        <Route path="/technicianActivity" element={<TechnicianActivity/>} />
-        <Route path="/pendingServices" element={<PendingServices/>} />
-        <Route path="/viewDetail" element={<ViewDetail/>} />
-        <Route path="/technicianProfileEdit" element={<TechnicianProfileEdit/>} />
-        <Route path="/technicianActivity/realTimeActivity" element={<RealTimeActivity/>} />
-      </Routes>
-     </div>
+        {/* Admin Routes */}
+        <div className="p-5 bg-[#EBF2F1] min-h-screen">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/city" element={<City />} />
+            <Route path="/addcity" element={<AddCity />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/addservice" element={<AddService />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/timeslot" element={<TimeSlotAndDate />} />
+            <Route path="/product" element={<AddProduct />} />
+            <Route path="/services" element={<AddServices />} />
+            <Route path="/time-slot" element={<AddTimeSlot />} />
+            <Route path="/banner" element={<Banner />} />
+            <Route path="/pending-orders" element={<PendingOrders />} />
+            <Route path="/send-notification" element={<SendNotification />} />
+            <Route path="/serviceEngineer" element={<ServiceEngineer />} />
+            <Route path="/serviceEngineer1" element={<ServiceEngineer1 />} />
+            <Route path="/serviceEngineer2" element={<ServiceEngineer2 />} />
+            <Route path="/technicianMonitoring" element={<TechnicianMonitoring />} />
+            <Route path="/technicianActivity" element={<TechnicianActivity />} />
+            <Route path="/pendingServices" element={<PendingServices />} />
+            <Route path="/viewDetail" element={<ViewDetail />} />
+            <Route path="/technicianProfileEdit" element={<TechnicianProfileEdit />} />
+            <Route path="/technicianActivity/realTimeActivity" element={<RealTimeActivity />} />
+          </Routes>
+        </div>
+      </div>
     </div>
-  </div>
   );
 };
 

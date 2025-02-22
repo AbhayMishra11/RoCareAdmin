@@ -13,7 +13,7 @@ const SignUp = () => {
     };
     return (
         <div className=" bg-[#7EC1B1]">
-            <div className="flex py-20 items-center justify-center items-end text-gray-500 gap-x-20">
+            <div className="flex py-20 items-center justify-center  text-gray-500 gap-x-20">
                 {/* Right Side - Logo Background */}
                 <img src={SignupImg} alt="Logo" className='w-[674px] h-[500px]' />
                 {/* Left Side - Login Form */}
