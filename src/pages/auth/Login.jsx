@@ -17,7 +17,7 @@ const Login = () => {
 
     return (
         <div className="h-[100vh] bg-[#7EC1B1]">
-            <div className="flex py-30 items-center items-end justify-center text-gray-600 gap-x-30 font-semibold">
+            <div className="flex py-30 items-center justify-center text-gray-600 gap-x-30 font-semibold">
                 {/* Left Side - Login Form */}
                 <div className="w-[630px] h-[735px] flex flex-col justify-center items-center bg-white border border-white rounded-2xl px-10 py-20 gap-x-2 gap-y-5">
                     {/* Title */}
