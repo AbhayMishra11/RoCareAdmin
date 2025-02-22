@@ -16,6 +16,8 @@ import PendingServices from '../components/ServiceEngineerDir/PendingServices'
 import ViewDetail from '../components/ServiceEngineerDir/ViewDetail'
 import TechnicianProfileEdit from '../components/ServiceEngineerDir/TechnicianProfileEdit'
 import RealTimeActivity from '../components/ServiceEngineerDir/RealTimeActivity'
+import PendingOrders from "../components/superAdmin/pages/PendingOrders";
+import SendNotification from "../components/superAdmin/pages/SendNotification";
 
 const Dashboard = () => <h1>Dashboard</h1>
 
@@ -40,6 +42,8 @@ const AdminLayout = () => {
         <Route path="/services" element={<AddServices />} />
         <Route path="/time-slot" element={<AddTimeSlot />} />
         <Route path="/banner" element={<Banner />} />
+        <Route path="/pending-orders" element={<PendingOrders/>} />
+        <Route path="/send-notification" element={<SendNotification/>} />
         <Route path="/serviceEngineer" element={<ServiceEngineer/>} />
         <Route path="/serviceEngineer1" element={<ServiceEngineer1/>} />
         <Route path="/serviceEngineer2" element={<ServiceEngineer2/>} />
