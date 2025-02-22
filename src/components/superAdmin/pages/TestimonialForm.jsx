@@ -71,7 +71,7 @@ export default function TestimonialForm() {
             value={formData.comment}
             onChange={handleChange}
             placeholder="Write Comment"
-            className="w-full border border border-gray-300 p-2 rounded h-40"
+            className="w-full border  border-gray-300 p-2 rounded h-40"
           />
         </div>
 
