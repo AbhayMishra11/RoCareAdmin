@@ -1,83 +1,95 @@
-import React from 'react'
-import PageHeader from './PageHeader'
-import b1 from '../../../assets/b1.png'
-import b2 from '../../../assets/b2.png'
-import b3 from '../../../assets/b3.png'
-import b4 from '../../../assets/b4.png'
-import { RiDeleteBin6Line } from "react-icons/ri";
-import { FaRegEdit } from "react-icons/fa";
+import { useState } from "react";
 
-const Banner = () => {
-  const bannerList = [
-    {id:1, category: 'Top Banner', img:b1},
-    {id:2, category: 'Refer & Earn', img:b2},
-    {id:3, category: 'Top Banner', img:b3},
-    {id:4, category: 'Top Banner', img:b4},
-  ]
+export default function Banner() {
+  const [bannerCategory, setBannerCategory] = useState("");
+  const [bannerImage, setBannerImage] = useState(null);
+  const [bannerStatus, setBannerStatus] = useState("Publish");
+
+  const handleImageUpload = (event) => {
+    setBannerImage(event.target.files[0]);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log({
+      bannerCategory,
+      bannerImage,
+      bannerStatus,
+    });
+  };
+
   return (
-    <div>
-      <section className="w-full flex text-sm justify-between p-3 bg-white rounded-xs">
-            <PageHeader />
-          </section>
+    <div
+      className="absolute bg-white shadow-md rounded-lg"
+      style={{
+        width: "1092px",
+        height: "905px",
+        top: "96px",
+        left: "324px",
+        padding: "24px",
+        gap: "24px",
+      }}
+    >
+      <h3 className="text-xl font-semibold mb-4">Banner Category</h3>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Banner Category */}
+        <div>
+          {/* <label className="block text-sm font-medium mb-2">
+            Banner Category
+          </label> */}
+          <select
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none"
+            value={bannerCategory}
+            onChange={(e) => setBannerCategory(e.target.value)}
+          >
+            <option value="">Select</option>
+            <option value="promotion">Promotion</option>
+            <option value="advertisement">Advertisement</option>
+          </select>
+        </div>
 
-          <section className="bg-white rounded-xs shadow mb-1 p-4 overflow-x-auto space-y-4">
+        {/* Banner Image */}
+        <div>
+        <h3 className="text-xl font-semibold mb-4">Banner Category</h3>
+          <div className="relative w-full border border-gray-300 rounded-md p-2 flex items-center">
+            <input
+              type="file"
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+              onChange={handleImageUpload}
+            />
+            <button
+              type="button"
+              className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md"
+            >
+              Choose File
+            </button>
+            <span className="ml-2 text-gray-500 text-sm">
+              {bannerImage ? bannerImage.name : "No File Uploaded"}
+            </span>
+          </div>
+        </div>
 
-          <table className="border w-full text-sm border-collapse bg-white shadow-md rounded-lg border-[#D9D9D9] ">
-              <thead className="bg-[#D9D9D9]">
-                <tr className="">
-                  <th className="px-4 py-2 text-left">SL. No.</th>
-                  <th className="px-4 py-2 text-left">Category</th>
-                  <th className="px-4 py-2 text-left">Banner Image</th>
-                  <th className="px-4 py-2 text-left">Status</th>
-                  <th className="px-4 py-2 text-left">Action</th>
-                </tr>
-              </thead>
+        {/* Banner Status */}
+        <div>
+        <h3 className="text-xl font-semibold mb-4">Banner Category</h3>
+          <select
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none"
+            value={bannerStatus}
+            onChange={(e) => setBannerStatus(e.target.value)}
+          >
+            <option value="Publish">Publish</option>
+            <option value="Draft">Draft</option>
+          </select>
+        </div>
 
-              <tbody>
-                {bannerList.map((item) => (
-                  <tr key={item.id} className="even:bg-white odd:bg-gray-100">
-                    <td className="px-4 py-2">{item.id}</td>
-                    <td className="px-4 py-2">{item.category}</td>
-                    <td className="px-4 py-2"><img src={item.img}/></td>
-                    <td className="px-4 py-2"><button
-                        className="cursor-pointer hover:bg-[#7EC1B1] border border-[#7EC1B1] text-[#7EC1B1]  px-8 py-2 text-sm hover:text-white rounded-3xl"
-                      >
-                        Published
-                      </button></td>
-                    <td className="px-4 py-2">
-                      <button
-                        className="flex gap-2 items-center"
-                      >
-                       <span className='bg-[#007AFF] rounded-xl p-2 text-md text-white'> <FaRegEdit /></span>
-                       <span className='bg-[#C17E7F] rounded-xl p-2 text-md text-white'> <RiDeleteBin6Line /></span>
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-
-
-           {/* Pagination Section */}
-           <div className="flex justify-between text-sm">
-              <div>
-                <p>Showing 1 to 10 of 30 Entries</p>
-              </div>
-              <div className="flex gap-2">
-                <button className=" bg-white border border-[#7EC1B1] px-4 py-2 text-[#7EC1B1] rounded-2xl">
-                  Previous
-                </button>
-                <button className=" bg-[#7EC1B1] px-4 py-2 text-white rounded-xl">
-                  1
-                </button>
-                <button className=" bg-white border border-[#7EC1B1] px-4 py-2 text-[#7EC1B1] rounded-2xl">
-                  Next
-                </button>
-              </div>
-            </div>
-          </section>
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-50 p-3 bg-cyan-400 text-white rounded-md"
+        >
+          Add Banner
+        </button>
+      </form>
     </div>
-  )
+  );
 }
-
-export default Banner

@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 // kusuma's imports
 import Login from '../pages/auth/Login';
@@ -15,7 +15,6 @@ import Header from '../components/superAdmin/header/Header';
 import LoadingPage from '../pages/modules/LoadingPage';
 import AddProduct from "../components/superAdmin/pages/AddProduct";
 import AddServices from "../components/superAdmin/pages/AddServices";
-import Banner from "../components/superAdmin/pages/Banner";
 import AddTimeSlot from "../components/superAdmin/pages/AddTimeSlot";
 //Abhay's imports
 import ServiceEngineer from '../components/ServiceEngineerDir/ServiceEngineer'
@@ -30,7 +29,17 @@ import RealTimeActivity from '../components/ServiceEngineerDir/RealTimeActivity'
 //Pinki's import
 import PendingOrders from "../components/superAdmin/pages/PendingOrders";
 import SendNotification from "../components/superAdmin/pages/SendNotification";
-
+//Roushan imports
+import Banner from "../components/superAdmin/pages/Banner";
+import Testimonial from "../components/superAdmin/pages/Testimonial";
+import InventoryManagement from "../components/superAdmin/pages/InventoryManagement";
+import PaymentGateway from "../components/superAdmin/pages/Paymentgateway";
+import Profile from "../components/superAdmin/pages/Profile";
+import Setting from "../components/superAdmin/pages/Setting";
+import PaymentGatewayForm from "../components/superAdmin/pages/AddCity";
+import TestimonialForm from "../components/superAdmin/pages/TestimonialForm";
+import Inventoryform from "../components/superAdmin/pages/Inventoryform";
+import Coustmer from "../components/superAdmin/pages/Coustmer";
 
 const AdminLayout = () => {
   const [loading, setLoading] = useState(true);
@@ -83,6 +92,16 @@ const AdminLayout = () => {
             <Route path="/viewDetail" element={<ViewDetail />} />
             <Route path="/technicianProfileEdit" element={<TechnicianProfileEdit />} />
             <Route path="/technicianActivity/realTimeActivity" element={<RealTimeActivity />} />
+            <Route path="/Testimonial" element={<Testimonial />} />
+            <Route path="/Banners" element={<Banner />} />
+            <Route path="/customers" element={<Coustmer />} />
+            <Route path="/Inventory Management" element={<InventoryManagement />} />
+            <Route path="/Payment Gateway" element={<PaymentGateway />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/settings" element={<Setting />} />
+            <Route path="/Inventoryform" element={<Inventoryform />} />
+            <Route path="/PaymentGatewayForm" element={<PaymentGatewayForm />} />
+            <Route path="/TestimonialForm" element={<TestimonialForm />} />
           </Routes>
         </div>
       </div>

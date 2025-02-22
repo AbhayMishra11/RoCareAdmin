@@ -126,7 +126,7 @@ export const sidebarItems = [
                 id: 2,
                 name: 'Technician',
                 icon: <GrUserWorker />,
-                path:'/technician',
+                path:'/serviceEngineer',
             },
             {
                 id: 3,
@@ -157,6 +157,36 @@ export const sidebarItems = [
                 name: 'Cancelled Orders',
                 icon: <FaHandshakeSimple />,                
                 path:'/orders',
+            },
+            {
+                id: 1,
+                name: 'Offers',
+                icon: <GoPeople />,
+                path:'/Offers',
+            },
+            {
+                id: 2,
+                name: 'Banners',
+                icon: <GrUserWorker />,
+                path:'/Banners',
+            },
+            {
+                id: 3,
+                name: 'Testimonial',
+                icon: <FaHandshakeSimple />,                
+                path:'/Testimonial',
+            },
+            {
+                id: 3,
+                name: 'Inventory Management ',
+                icon: <FaHandshakeSimple />,                
+                path:'/Inventory Management',
+            },
+            {
+                id: 3,
+                name: 'Payment Gateway ',
+                icon: <FaHandshakeSimple />,                
+                path:'/Payment Gateway',
             },
         ],
 
