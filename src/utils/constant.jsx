@@ -150,13 +150,13 @@ export const sidebarItems = [
                 id: 2,
                 name: 'Complete Orders',
                 icon: <GrUserWorker />,
-                path:'/orders',
+                path:'/CompleteOrders',
             },
             {
                 id: 3,
                 name: 'Cancelled Orders',
                 icon: <FaHandshakeSimple />,                
-                path:'/orders',
+                path:'/CancelledOrder',
             },
             {
                 id: 1,

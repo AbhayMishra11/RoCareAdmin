@@ -40,6 +40,12 @@ import PaymentGatewayForm from "../components/superAdmin/pages/AddCity";
 import TestimonialForm from "../components/superAdmin/pages/TestimonialForm";
 import Inventoryform from "../components/superAdmin/pages/Inventoryform";
 import Coustmer from "../components/superAdmin/pages/Coustmer";
+//Afsana's imports
+import CancelledOrder from '../components/superAdmin/pages/CancelledOrder';
+import CancelledOrderPreview from '../components/superAdmin/pages/CancelledOrderPreview';
+import Offers from '../components/superAdmin/pages/Offers';
+import CompleteOrders from '../components/superAdmin/pages/CompleteOrders'
+ import CompleteOrdersPreview from '../components/superAdmin/pages/CompleteOrdersPreview'
 
 const AdminLayout = () => {
   const [loading, setLoading] = useState(true);
@@ -102,6 +108,11 @@ const AdminLayout = () => {
             <Route path="/Inventoryform" element={<Inventoryform />} />
             <Route path="/PaymentGatewayForm" element={<PaymentGatewayForm />} />
             <Route path="/TestimonialForm" element={<TestimonialForm />} />
+            <Route path="/CompleteOrders" element={<CompleteOrders />} />
+            <Route path="/CompleteOrdersPreview" element={<CompleteOrdersPreview />} />
+            <Route path="/CancelledOrder" element={<CancelledOrder />} />
+            <Route path="/CancelledOrderPreview" element={<CancelledOrderPreview />} />
+            <Route path="/Offers" element={<Offers />} />
           </Routes>
         </div>
       </div>
